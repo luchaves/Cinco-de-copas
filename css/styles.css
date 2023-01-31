@@ -1,0 +1,613 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.webBase {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content auto max-content;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "navBar"
+        "main"
+        "footer";
+}
+
+.navBar {
+    width: 100%;
+    background-color: rgb(119, 42, 42);
+    text-shadow: 0 0 5px #000;
+    grid-area: navBar;
+}
+
+.bg-light {
+    --bs-bg-opacity: 0 !important;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.navbar-brand {
+    color: #fff !important;
+    font-size: 2.2rem !important;
+    margin: 0 0 -.3rem !important;
+    padding: 0 !important;
+    transition: all .2s ease-in-out;
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+.nav-link {
+    color: #fff !important;
+    font-size: 1.5rem !important;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+    transition: all .2s ease-in-out;
+    transform: translateY(-.2rem);
+    filter: drop-shadow(2px 5px 8px rgba(0, 0, 0, 0.627));
+}
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: end;
+}
+
+
+
+.main {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    justify-content: flex-end;
+    align-items: center;
+    grid-area: main;
+}
+
+.card_container {
+    background-image: url(../images/came-gcd441ffbe_1920.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
+
+    display: flex;
+    justify-content: end;
+}
+
+.main_card {
+    width: 70%;
+    height: max-content;
+    background-color: rgba(0, 0, 0, 0.725);
+    padding: 30px;
+    margin: auto 2%;
+    border-radius: 10px;
+    border: 4px solid #fff;
+    overflow: auto;
+    box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.359);
+}
+
+.main_card-title {
+    color: salmon;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.main_card-content {
+    font-family: 'Roboto Slab', serif;
+    color: #fff;
+    margin-bottom: 30px;
+    padding-bottom: 2rem;
+}
+
+.main_card-footer--button {
+    color: rgb(255, 244, 244);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 3px solid salmon;
+    transition: all .25s ease-in-out;
+}
+
+.main_card-footer--button:hover {
+    background-color: salmon;
+    border-color: #fff;
+    color: #fff;
+    text-shadow: 0 0 5px;
+}
+
+.main_us-content {
+    height: max-content;
+    width: 100%;
+    background-color: rgb(119, 42, 42);
+    padding-top: 1.2rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "main_us-content--left main_us-content--right";
+}
+
+.main_us-content--left {
+    background-image: url(../images/wine-g2ea05054b_1920.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: main_us-content--left;
+}
+
+.main_us-content--right {
+    grid-area: main_us-content--right;
+    height: auto;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.main_us-content--right---title {
+    text-align: center;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+
+}
+
+.main_us-content--right---content {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+
+.main_us-title,
+.main_gallery-title {
+    text-align: center;
+    background-color: rgb(119, 42, 42);
+    color: #fff;
+    text-shadow: #000;
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+.main_gallery-gallery {
+    height: 1000px;
+    width: 100%;
+    background-color: rgb(119, 42, 42);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (8, 200px);
+    grid-gap: 20px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.item {
+    border: 1.5px solid #000;
+    background-size: cover;
+    background-position: center;
+    transition: all .15s ease-in-out;
+}
+
+.item:hover {
+    transform: scale(1.02);
+    box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.429);
+}
+
+.item1 {
+    background-image: url(../images/wine-gc4dc6206d_1920.jpg);
+}
+
+.item2 {
+    background-image: url(../images/wine-gdc50942e9_1920.jpg);
+}
+
+.item3 {
+    background-image: url(../images/wine-g63df27e64_1920.jpg);
+}
+
+.item4 {
+    background-image: url(../images/wine-g7c206608c_1920.jpg);
+}
+
+.item5 {
+    background-image: url(../images/red-wine-g8666dc17a_1920.jpg);
+}
+
+.item6 {
+    background-image: url(../images/wine-gb55edcd2c_1920.jpg);
+}
+
+.item7 {
+    background-image: url(../images/wine-bottles-g88e5c8203_1920.jpg);
+}
+
+.item8 {
+    background-image: url(../images/came-gcd441ffbe_1920.jpg);
+}
+
+.footer {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+    grid-area: footer;
+}
+
+.footer_copyright {
+    margin-top: 5px;
+    font-size: 40pxs;
+}
+
+.footer_social {
+    margin-top: 10px;
+    font-size: 40pxs;
+}
+
+.footer_social-icon {
+    color: white;
+    font-size: 1.4rem;
+    margin: 0 .5rem;
+    transition: all .25s ease-in-out;
+}
+
+.footer_social-icon:hover {
+    color: rgb(119, 42, 42);
+}
+
+.noneDecoration {
+    text-decoration: none;
+}
+
+.form_container {
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/red-wine-g98b5068e1_1920.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.form_title {
+    color: #fff;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+}
+
+.form_description {
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+}
+
+.form {
+    background-color: rgba(152, 152, 152, 0.283);
+    backdrop-filter: blur(3px);
+    border: 2px solid black;
+    margin: 0 auto;
+    border-radius: 14px;
+    padding: 1rem;
+    width: 50%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_inputs {
+    background-color: rgba(128, 128, 128, 0.23);
+    font-family: 'Roboto Slab', serif;
+    margin: .5rem 0;
+    height: 2.5rem;
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0);
+    padding: .3rem .4rem;
+    border: 2px inset grey;
+}
+
+.form_textarea {
+    background-color: rgba(128, 128, 128, 0.23);
+    font-family: 'Roboto Slab', serif;
+    margin: .5rem 0;
+    height: 10rem;
+    resize: none;
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0);
+    padding: .3rem .4rem;
+    border: 2px inset grey;
+}
+
+.form_button {
+    font-family: 'Roboto Slab', serif;
+    background-color: rgba(187, 71, 71, 0.44);
+    height: 2.5rem;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    border: 2px inset grey;
+    transition: all .25s ease-in-out;
+}
+
+.form_button:hover {
+    transform: translateY(-.1rem);
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.323);
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.866);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.main_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url(../images/bodega-porto_78361-1838.avif);
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel {
+    width: 50%;
+    min-width: 800px;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.446);
+}
+
+.productos_img {
+    height: 50vh;
+    width: 50vh !important;
+    object-fit: cover;
+}
+
+
+.main_historia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url(../images/grunge-vintage-old-paper-texture-background-elegant-design-with-copy-space-for-montage-your-text-design-and-products-photo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.historia_container {
+    margin: 2rem;
+    width: 30rem;
+}
+
+.historia_card {
+    height: max-content;
+    background-color: rgba(128, 128, 128, 0.43);
+    border-radius: 14px;
+    padding: 1rem 1rem .5rem;
+    border: 2px solid rgba(0, 0, 0, 0.391);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.453);
+}
+
+.historia_año {
+    border: 2px solid rgba(0, 0, 0, 0.391);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.453);
+    border-radius: 14px;
+    padding: 0.2rem .5rem -1rem;
+    background-color: rgba(128, 128, 128, 0.43);
+    width: 5rem;
+    margin: 2rem auto !important;
+}
+
+p {
+    margin-bottom: 0 !important;
+}
+
+.center {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+}
+
+.quienesSomos {
+    background-image: url(../images/wine-g63df27e64_1920.jpg);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.quienesSomos_card {
+    width: 70%;
+    background-color: rgba(128, 128, 128, 0.281);
+    padding: 1.5rem;
+    backdrop-filter: blur(3px);
+    border: 2px solid rgba(0, 0, 0, 0.308);
+    border-radius: 14px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.565);
+}
+
+.quienesSomos_card-title {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    padding-bottom: 1rem;
+}
+
+.quienesSomos_card-content {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.servicios {
+    background-image: url(../images/wine-g2ea05054b_1920.jpg);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicios_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 2rem;
+    width: 18rem;
+    height: 20rem;
+}
+
+.servicios_img {
+    height: 558px;
+    width: ;
+    object-fit: cover;
+}
+
+@media only screen and (max-width:992px) {
+    .navbar-nav {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width:850px) {
+    .carousel {
+        width: 90%;
+        min-width: 300px !important;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .main_us-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+        grid-auto-columns: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "main_us-content--left"
+            "main_us-content--right";
+    }
+
+    .main_us-content--left {
+        grid-area: main_us-content--left;
+        height: 20vh;
+    }
+
+    .main_us-content--right {
+        grid-area: main_us-content--right;
+    }
+
+    .main_card {
+        width: 100%;
+        margin: auto 2rem;
+    }
+
+    .main_card-title,
+    .main_card-content {
+        text-align: center;
+    }
+
+    .main_card-footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main_card-content {
+        margin-bottom: .8rem;
+    }
+
+    .main_card {
+
+        padding: .8rem;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .main_card {
+        width: 100%;
+        margin: 2rem 2rem;
+    }
+}
+
+
+@media only screen and (min-width:480px) {
+    .main_gallery-gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 200px);
+        height: max-content;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width:1023px) {
+    .main_gallery-gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .item1 {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    .item2 {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+
+    .item3 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .item4 {
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+
+    .item5 {
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+
+    .item6 {
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+
+    .item7 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    .item8 {
+        grid-column: 2/4;
+        grid-row: 4/5;
+    }
+}
+
+@media only screen and(min-width:1024px) {
+    .main_gallery-gallery {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2x 200px);
+    }
+}

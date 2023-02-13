@@ -4,30 +4,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
+    &_card {
+        width: 70%;
+        background-color: rgba(128, 128, 128, 0.281);
+        padding: 1.5rem;
+        backdrop-filter: blur(3px);
+        border: 2px solid rgba(0, 0, 0, 0.308);
+        border-radius: 14px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.565);
 
-.quienesSomos_card {
-    width: 70%;
-    background-color: rgba(128, 128, 128, 0.281);
-    padding: 1.5rem;
-    backdrop-filter: blur(3px);
-    border: 2px solid rgba(0, 0, 0, 0.308);
-    border-radius: 14px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.565);
-}
+        &-title {
+            font-family: 'Roboto Slab', serif;
+            text-align: center;
+            font-size: 1.5rem;
+            color: #fff;
+            padding-bottom: 1rem;
+        }
 
-.quienesSomos_card-title {
-    font-family: 'Roboto Slab', serif;
-    text-align: center;
-    font-size: 1.5rem;
-    color: #fff;
-    padding-bottom: 1rem;
-}
-
-.quienesSomos_card-content {
-    font-family: 'Roboto Slab', serif;
-    text-align: center;
-    font-size: 1.2rem;
-    color: #fff;
+        &-content {
+            font-family: 'Roboto Slab', serif;
+            text-align: center;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+    }
 }

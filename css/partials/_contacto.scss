@@ -1,0 +1,82 @@
+.form_container {
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/red-wine-g98b5068e1_1920.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.form_title {
+    color: #fff;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+}
+
+.form_description {
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+}
+
+.form {
+    background-color: rgba(152, 152, 152, 0.283);
+    backdrop-filter: blur(3px);
+    border: 2px solid black;
+    margin: 0 auto;
+    border-radius: 14px;
+    padding: 1rem;
+    width: 50%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_inputs {
+    background-color: rgba(128, 128, 128, 0.23);
+    font-family: 'Roboto Slab', serif;
+    margin: .5rem 0;
+    height: 2.5rem;
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0);
+    padding: .3rem .4rem;
+    border: 2px inset grey;
+}
+
+.form_textarea {
+    background-color: rgba(128, 128, 128, 0.23);
+    font-family: 'Roboto Slab', serif;
+    margin: .5rem 0;
+    height: 10rem;
+    resize: none;
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0);
+    padding: .3rem .4rem;
+    border: 2px inset grey;
+}
+
+.form_button {
+    font-family: 'Roboto Slab', serif;
+    background-color: rgba(187, 71, 71, 0.44);
+    height: 2.5rem;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    border: 2px inset grey;
+    transition: all .25s ease-in-out;
+}
+
+.form_button:hover {
+    transform: translateY(-.1rem);
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.323);
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.866);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

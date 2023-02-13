@@ -1,0 +1,24 @@
+.servicios {
+    background-image: url(../images/wine-g2ea05054b_1920.jpg);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicios_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 2rem;
+    width: 18rem;
+    height: 20rem;
+}
+
+.servicios_img {
+    height: 558px;
+    width: auto;
+    object-fit: cover;
+}

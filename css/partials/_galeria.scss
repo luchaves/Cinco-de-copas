@@ -1,0 +1,156 @@
+.main_gallery-title {
+    text-align: center;
+    background-color: rgb(119, 42, 42);
+    color: #fff;
+    text-shadow: #000;
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+.main_gallery-gallery {
+    height: 1000px;
+    width: 100%;
+    background-color: rgb(119, 42, 42);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (8, 200px);
+    grid-gap: 20px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.item {
+    border: 1.5px solid #000;
+    background-size: cover;
+    background-position: center;
+    transition: all .15s ease-in-out;
+}
+
+.item:hover {
+    transform: scale(1.02);
+    box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.429);
+}
+
+.item1 {
+    background-image: url(../images/wine-gc4dc6206d_1920.jpg);
+}
+
+.item2 {
+    background-image: url(../images/wine-gdc50942e9_1920.jpg);
+}
+
+.item3 {
+    background-image: url(../images/wine-g63df27e64_1920.jpg);
+}
+
+.item4 {
+    background-image: url(../images/wine-g7c206608c_1920.jpg);
+}
+
+.item5 {
+    background-image: url(../images/red-wine-g8666dc17a_1920.jpg);
+}
+
+.item6 {
+    background-image: url(../images/wine-gb55edcd2c_1920.jpg);
+}
+
+.item7 {
+    background-image: url(../images/wine-bottles-g88e5c8203_1920.jpg);
+}
+
+.item8 {
+    background-image: url(../images/came-gcd441ffbe_1920.jpg);
+}
+
+@media only screen and (min-width:480px) {
+    .main_gallery-gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 200px);
+        height: max-content;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width:1023px) {
+    .main_gallery-gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .item1 {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    .item2 {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+
+    .item3 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .item4 {
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+
+    .item5 {
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+
+    .item6 {
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+
+    .item7 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    .item8 {
+        grid-column: 2/4;
+        grid-row: 4/5;
+    }
+}
+
+.carousel {
+    width: 50%;
+    min-width: 800px;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.446);
+}
+
+.productos_img {
+    height: 50vh;
+    width: 50vh !important;
+    object-fit: cover;
+}
+
+.main_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url(../images/bodega-porto_78361-1838.avif);
+    background-size: cover;
+    background-position: center;
+}
+
+@media only screen and (min-width:1024px) {
+    .main_gallery-gallery {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2x 200px);
+    }
+}
+
+@media only screen and (max-width:850px) {
+    .carousel {
+        width: 90%;
+        min-width: 300px !important;
+    }
+}

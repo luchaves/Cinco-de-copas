@@ -1,0 +1,43 @@
+.main_historia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url(../images/grunge-vintage-old-paper-texture-background-elegant-design-with-copy-space-for-montage-your-text-design-and-products-photo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.historia_container {
+    margin: 2rem;
+    width: 30rem;
+}
+
+.historia_card {
+    height: max-content;
+    background-color: rgba(128, 128, 128, 0.43);
+    border-radius: 14px;
+    padding: 1rem 1rem .5rem;
+    border: 2px solid rgba(0, 0, 0, 0.391);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.453);
+}
+
+.historia_año {
+    border: 2px solid rgba(0, 0, 0, 0.391);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.453);
+    border-radius: 14px;
+    padding: 0.2rem .5rem -1rem;
+    background-color: rgba(128, 128, 128, 0.43);
+    width: 5rem;
+    margin: 2rem auto !important;
+}
+
+p {
+    margin-bottom: 0 !important;
+}
+
+.center {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+}

@@ -1,0 +1,33 @@
+.footer {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+    grid-area: footer;
+}
+
+.footer_copyright {
+    margin-top: 5px;
+    font-size: 40pxs;
+}
+
+.footer_social {
+    margin-top: 10px;
+    font-size: 40pxs;
+}
+
+.footer_social-icon {
+    color: white;
+    font-size: 1.4rem;
+    margin: 0 .5rem;
+    transition: all .25s ease-in-out;
+}
+
+.footer_social-icon:hover {
+    color: rgb(119, 42, 42);
+}
+
+.noneDecoration {
+    text-decoration: none;
+}

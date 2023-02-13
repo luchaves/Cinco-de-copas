@@ -1,0 +1,167 @@
+.main {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    justify-content: flex-end;
+    align-items: center;
+    grid-area: main;
+
+    &_card {
+        width: 70%;
+        height: max-content;
+        background-color: rgba(0, 0, 0, 0.725);
+        padding: 30px;
+        margin: auto 2%;
+        border-radius: 10px;
+        border: 4px solid #fff;
+        overflow: auto;
+        box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.359);
+
+        @media only screen and (max-width:768px) {
+
+            padding: .8rem;
+        }
+
+        @media only screen and (max-width:600px) {
+            width: 100%;
+            margin: 2rem 2rem;
+        }
+
+        &-title {
+            color: salmon;
+            text-transform: uppercase;
+            font-family: 'Bebas Neue', cursive;
+        }
+
+        &-content {
+            font-family: 'Roboto Slab', serif;
+            color: #fff;
+            margin-bottom: 30px;
+            padding-bottom: 2rem;
+        }
+
+        &-footer--button {
+            color: rgb(255, 244, 244);
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: transparent;
+            border: 3px solid salmon;
+            transition: all .25s ease-in-out;
+        }
+
+        &-footer--button:hover {
+            background-color: salmon;
+            border-color: #fff;
+            color: #fff;
+            text-shadow: 0 0 5px;
+        }
+    }
+
+    &_us-content {
+        height: max-content;
+        width: 100%;
+        background-color: rgb(119, 42, 42);
+        padding-top: 1.2rem;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr;
+        grid-auto-columns: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "main_us-content--left main_us-content--right";
+
+        &-content--left {
+            background-image: url(../images/wine-g2ea05054b_1920.jpg);
+            background-size: cover;
+            background-position: center;
+            grid-area: main_us-content--left;
+        }
+
+        &-content--right {
+            grid-area: main_us-content--right;
+            height: auto;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+
+            &---title {
+                text-align: center;
+                font-size: 1.3rem;
+                text-transform: uppercase;
+                text-align: center;
+                font-family: 'Anton', sans-serif;
+
+            }
+
+            &---content {
+                text-align: center;
+                font-family: 'Roboto Slab', serif;
+
+            }
+        }
+
+        &-title {
+            text-align: center;
+            background-color: rgb(119, 42, 42);
+            color: #fff;
+            text-shadow: #000;
+            padding: 10px;
+            text-transform: uppercase;
+            font-family: 'Bebas Neue', cursive;
+        }
+    }
+}
+
+.card_container {
+    background-image: url(../images/came-gcd441ffbe_1920.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+@media only screen and (max-width:768px) {
+    .main_us-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+        grid-auto-columns: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "main_us-content--left"
+            "main_us-content--right";
+    }
+
+    .main_us-content--left {
+        grid-area: main_us-content--left;
+        height: 20vh;
+    }
+
+    .main_us-content--right {
+        grid-area: main_us-content--right;
+    }
+
+    .main_card {
+        width: 100%;
+        margin: auto 2rem;
+    }
+
+    .main_card-title,
+    .main_card-content {
+        text-align: center;
+    }
+
+    .main_card-footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main_card-content {
+        margin-bottom: .8rem;
+    }
+    }
+    

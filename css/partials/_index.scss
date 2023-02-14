@@ -1,6 +1,8 @@
+@import "./mixins";
+
 .main {
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: map-get($colors, white-background);
     justify-content: flex-end;
     align-items: center;
     grid-area: main;
@@ -28,29 +30,30 @@
         }
 
         &-title {
-            color: salmon;
+            color: map-get($colors, salmon-title);
             text-transform: uppercase;
             font-family: 'Bebas Neue', cursive;
 
             @media only screen and (max-width:768px) {
-                text-align: center;
+                @include flex-center;
             }
         }
 
         &-content {
             font-family: 'Roboto Slab', serif;
-            color: #fff;
+            color: map-get($colors, white-text);
             margin-bottom: 30px;
             padding-bottom: 2rem;
 
             @media only screen and (max-width:768px) {
-                text-align: center;
+                @include flex-center;
                 margin-bottom: .8rem;
+                text-align: center;
             }
         }
 
         &-footer--button {
-            color: rgb(255, 244, 244);
+            color: map-get($colors, white-text);
             text-transform: uppercase;
             text-decoration: none;
             padding: 10px 20px;
@@ -60,9 +63,9 @@
         }
 
         &-footer--button:hover {
-            background-color: salmon;
+            background-color: map-get($colors, salmon-background);
             border-color: #fff;
-            color: #fff;
+            color: map-get($colors, white-text);
             text-shadow: 0 0 5px;
         }
     }
@@ -70,7 +73,7 @@
     &_us-content {
         height: max-content;
         width: 100%;
-        background-color: rgb(119, 42, 42);
+        background-color: map-get($colors, wine-background);
         padding-top: 1.2rem;
         display: grid;
         grid-template-columns: 50% 50%;
@@ -93,7 +96,7 @@
                 "main_us-content--right";
         }
 
-        &-content--left {
+        &--left {
             background-image: url(../images/wine-g2ea05054b_1920.jpg);
             background-size: cover;
             background-position: center;
@@ -105,11 +108,11 @@
             }
         }
 
-        &-content--right {
+        &--right {
             grid-area: main_us-content--right;
             height: auto;
             width: 100%;
-            background-color: #fff;
+            background-color: map-get($colors, white-text);
             padding: 20px;
 
             @media only screen and (max-width:768px) {
@@ -122,7 +125,6 @@
                 text-transform: uppercase;
                 text-align: center;
                 font-family: 'Anton', sans-serif;
-
             }
 
             &---content {
@@ -132,15 +134,16 @@
             }
         }
 
-        &-title {
-            text-align: center;
-            background-color: rgb(119, 42, 42);
-            color: #fff;
-            text-shadow: #000;
-            padding: 10px;
-            text-transform: uppercase;
-            font-family: 'Bebas Neue', cursive;
-        }
+    }
+
+    &_us-title {
+        text-align: center;
+        background-color: map-get($colors, wine-background);
+        color: map-get($colors, white-title);
+        text-shadow: #000;
+        padding: 10px;
+        text-transform: uppercase;
+        font-family: 'Bebas Neue', cursive;
     }
 }
 
@@ -155,10 +158,10 @@
 
 .main_card-footer {
     @media only screen and (max-width:768px) {
-        display: flex;
-        justify-content: center;
+        @include flex-center
     }
 }
+
 .item {
     border: 1.5px solid #000;
     background-size: cover;
@@ -172,8 +175,20 @@
 
     &1 {
         background-image: url(../images/wine-gc4dc6206d_1920.jpg);
+        grid-column: 1/3;
+        grid-row: 1/2;
 
-        @media only screen and (min-width: 768px) and (max-width:1023px) {
+        @media screen and (max-width:1023px) {
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+
+        @media screen and (max-width:768px) {
+            grid-column: 1/1;
+            grid-row: 1/2;
+        }
+
+        @media screen and (max-width:479px) {
             grid-column: 1/3;
             grid-row: 1/2;
         }
@@ -181,65 +196,148 @@
 
     &2 {
         background-image: url(../images/wine-gdc50942e9_1920.jpg);
+        grid-column: 3/5;
+        grid-row: 1/2;
 
-        @media only screen and (min-width: 768px) and (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             grid-column: 3/4;
             grid-row: 1/2;
+        }
+
+        @media screen and (max-width:768px) {
+            grid-column: 2/2;
+            grid-row: 1/2;
+        }
+
+        @media screen and (max-width:479px) {
+            grid-column: 1/3;
+            grid-row: 2/3;
         }
     }
 
     &3 {
         background-image: url(../images/wine-g63df27e64_1920.jpg);
+        grid-column: 1/3;
+        grid-row: 2/3;
 
-        @media only screen and (min-width: 768px) and (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             grid-column: 1/2;
             grid-row: 2/3;
         }
-    }
 
-    &4 {
-        background-image: url(../images/wine-g7c206608c_1920.jpg);
-
-        @media only screen and (min-width: 768px) and (max-width:1023px) {
-            grid-column: 2/4;
+        @media screen and (max-width:768px) {
+            grid-column: 1/1;
             grid-row: 2/3;
         }
-    }
 
-    &5 {
-        background-image: url(../images/red-wine-g8666dc17a_1920.jpg);
-
-        @media only screen and (min-width: 768px) and (max-width:1023px) {
+        @media screen and (max-width:479px) {
             grid-column: 1/3;
             grid-row: 3/4;
         }
     }
 
+    &4 {
+        background-image: url(../images/wine-g7c206608c_1920.jpg);
+        grid-column: 3/5;
+        grid-row: 2/3;
+
+        @media screen and (max-width:1023px) {
+            grid-column: 2/4;
+            grid-row: 2/3;
+        }
+
+        @media screen and (max-width:768px) {
+            grid-column: 2/2;
+            grid-row: 2/3;
+        }
+
+        @media screen and (max-width:479px) {
+            grid-column: 1/3;
+            grid-row: 4/5;
+        }
+    }
+
+    &5 {
+        background-image: url(../images/red-wine-g8666dc17a_1920.jpg);
+        grid-column: 1/3;
+        grid-row: 3/4;
+
+        @media screen and (max-width:1023px) {
+            grid-column: 1/3;
+            grid-row: 3/4;
+        }
+
+        @media screen and (max-width:768px) {
+            grid-column: 1/1;
+            grid-row: 3/4;
+        }
+
+        @media screen and (max-width:479px) {
+            grid-column: 1/3;
+            grid-row: 5/6;
+        }
+    }
+
     &6 {
         background-image: url(../images/wine-gb55edcd2c_1920.jpg);
+        grid-column: 3/5;
+        grid-row: 3/4;
 
-        @media only screen and (min-width: 768px) and (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             grid-column: 3/4;
             grid-row: 3/4;
+        }
+
+        @media screen and (max-width:768px) {
+            grid-column: 2/2;
+            grid-row: 3/4;
+        }
+
+        @media screen and (max-width:479px) {
+            grid-column: 1/3;
+            grid-row: 6/7;
         }
     }
 
     &7 {
         background-image: url(../images/wine-bottles-g88e5c8203_1920.jpg);
+        grid-column: 1/3;
+        grid-row: 4/5;
 
-        @media only screen and (min-width: 768px) and (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             grid-column: 1/2;
             grid-row: 4/5;
+        }
+
+        @media screen and (max-width:768px) {
+            grid-column: 1/1;
+            grid-row: 4/5;
+        }
+
+        @media screen and (max-width:479px) {
+            grid-column: 1/3;
+            grid-row: 7/8;
         }
     }
 
     &8 {
         background-image: url(../images/came-gcd441ffbe_1920.jpg);
+        grid-column: 3/5;
+        grid-row: 4/5;
 
-        @media only screen and (min-width: 768px) and (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             grid-column: 2/4;
             grid-row: 4/5;
         }
+
+        @media screen and (max-width:768px) {
+            grid-column: 2/2;
+            grid-row: 4/5;
+        }
+
+        @media screen and (max-width:479px) {
+            grid-column: 1/3;
+            grid-row: 8/9;
+        }
     }
 }
-

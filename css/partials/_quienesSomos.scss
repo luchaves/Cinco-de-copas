@@ -6,6 +6,7 @@
     align-items: center;
 
     &_card {
+        margin: 2rem;
         width: 70%;
         background-color: rgba(128, 128, 128, 0.281);
         padding: 1.5rem;
@@ -18,7 +19,7 @@
             font-family: 'Roboto Slab', serif;
             text-align: center;
             font-size: 1.5rem;
-            color: #fff;
+            color: map-get($colors, white-title);
             padding-bottom: 1rem;
         }
 
@@ -26,7 +27,7 @@
             font-family: 'Roboto Slab', serif;
             text-align: center;
             font-size: 1.2rem;
-            color: #fff;
+            color: map-get($colors, white-text);
         }
     }
 }

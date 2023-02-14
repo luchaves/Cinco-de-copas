@@ -1,8 +1,8 @@
+@import "./mixins";
+
 .main_historia {
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 100%;
     background-image: url(../images/grunge-vintage-old-paper-texture-background-elegant-design-with-copy-space-for-montage-your-text-design-and-products-photo.jpg);
     background-size: cover;

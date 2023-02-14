@@ -1,11 +1,12 @@
-@import "./partials/reset";
-@import "./partials/variables";
-@import "./partials/base";
-@import "./partials/footer";
-@import "./partials/index";
-@import "./partials/header";
-@import "./partials/contacto";
-@import "./partials/servicios";
-@import "./partials/quienesSomos";
-@import "./partials/historia";
-@import "./partials/galeria";
+@import "./partials/reset",
+"./partials/colors",
+"./partials/base",
+"./partials/mixins",
+"./partials/footer",
+"./partials/index",
+"./partials/header",
+"./partials/contacto",
+"./partials/servicios",
+"./partials/quienesSomos",
+"./partials/historia",
+"./partials/galeria"

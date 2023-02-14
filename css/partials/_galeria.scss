@@ -1,6 +1,6 @@
 .main_gallery-title {
     text-align: center;
-    background-color: rgb(119, 42, 42);
+    background-color: map-get($colors, wine-background);
     color: #fff;
     text-shadow: #000;
     padding: 10px;
@@ -12,7 +12,7 @@
 .main_gallery-gallery {
     height: 1000px;
     width: 100%;
-    background-color: rgb(119, 42, 42);
+    background-color: map-get($colors, wine-background);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat (8, 200px);

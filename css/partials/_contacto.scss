@@ -21,17 +21,16 @@
     }
 
     &_title {
-        color: #fff;
+        color: map-get($colors, white-title);
         font-family: 'Bebas Neue', cursive;
         text-align: center;
     }
 
     &_description {
         text-align: center;
-        color: #fff;
+        color: map-get($colors, white-text);
         font-family: 'Roboto Slab', serif;
     }
-
 
     &_inputs {
         background-color: rgba(128, 128, 128, 0.23);
